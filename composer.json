@@ -4,8 +4,8 @@
     "description": "Add Disqus discussions to your site",
     "require": {
         "typo3/flow": "*",
-        "typo3/neos": "~1.2",
-        "typo3/typoscript": "~1.2"
+        "typo3/neos": "*",
+        "typo3/typoscript": "*"
     },
     "autoload": {
         "psr-0": {
