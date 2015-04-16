@@ -15,3 +15,10 @@ prototype(Helmich.Disqus:Discussion) < prototype(TYPO3.Neos:Content) {
 
     inBackend = ${node.context.workspace.name != 'live'}
 }
+
+prototype(Helmich.Disqus:Count) < prototype(TYPO3.TypoScript:Template) {
+    templatePath = 'resource://Helmich.Disqus/Private/Templates/TypoScriptObjects/Count.html'
+    shortname = null
+
+    inBackend = ${node.context.workspace.name != 'live'}
+}

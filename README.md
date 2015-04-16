@@ -47,8 +47,8 @@ name using TypoScript:
         }
     }
 
-Integration Disqus on all pages
--------------------------------
+Integrate Disqus on all pages
+-----------------------------
 
 You can use this plugin to integrate Disqus discussions on all (or a subset) of
 all pages using TypoScript:
@@ -72,3 +72,26 @@ all pages using TypoScript:
 Inside your page fluid template, then simply render the content element:
 
     {parts.discussion -> f:format.raw()}
+
+Integrate comment count
+-----------------------
+
+You can also integrate a comment count in overview pages. Simply insert an
+object of type `Helmich.Disqus:Count` anywhere in your page, and add an
+`data-disqus-identifier` attribute to your links.
+
+    page = TYPO3.Neos:Page {
+        // Other definitions
+
+        footer {
+            disqusCount = Helmich.Disqus:Count {
+                shortname = 'your-site-name'
+            }
+        }
+    }
+
+In template:
+
+    <a href="{neos:uri.node(node: myPage, section='disqus_thread'}" data-disqus-identifier="{myPage.identifier}">
+        0 Comments
+    </a>
