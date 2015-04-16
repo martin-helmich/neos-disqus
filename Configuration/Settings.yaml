@@ -1,7 +1,3 @@
-Helmich:
-  Disqus:
-    siteId: yoursite
-
 TYPO3:
   Neos:
     typoScript:
