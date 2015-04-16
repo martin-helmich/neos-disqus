@@ -1,0 +1,9 @@
+Helmich:
+  Disqus:
+    siteId: yoursite
+
+TYPO3:
+  Neos:
+    typoScript:
+      autoInclude:
+        'Helmich.Disqus': TRUE

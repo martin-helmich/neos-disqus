@@ -1,0 +1,32 @@
+<div id="disqus_thread" {attributes -> f:format.raw()}></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = {shortname -> f:format.json()};
+    var disqus_identifier = {identifier -> f:format.json()};
+    var disqus_url = {url -> f:format.json()};
+    var disqus_title = {title -> f:format.json()};
+    var disqus_category_id = {category -> f:format.json()};
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
+    powered by Disqus.</a>
+</noscript>
+
+<f:if condition="{inBackend}">
+    <script type="text/javascript">
+        if (typeof document.addEventListener === 'function') {
+            document.addEventListener('Neos.PageLoaded', function(event) {
+                DISQUS.next.host.loader.loadEmbed()
+            }, false);
+        }
+    </script>
+</f:if>

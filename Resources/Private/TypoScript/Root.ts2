@@ -1,0 +1,17 @@
+prototype(Helmich.Disqus:Discussion) < prototype(TYPO3.Neos:Content) {
+    @override.document = ${q(node).filter('[instanceof TYPO3.Neos:Document]').add(q(node).parents('[instanceof TYPO3.Neos:Document]')).get(0)}
+
+    templatePath = 'resource://Helmich.Disqus/Private/Templates/TypoScriptObjects/Discussion.html'
+
+    shortname = ${q(node).property('disqusSitename')}
+    identifier = ${q(node).property('disqusIdentifier') ? q(node).property('disqusIdentifier') : document.identifier}
+    category = null
+    title = ${q(document).property('title')}
+
+    url = TYPO3.Neos:NodeUri {
+        node     = ${document}
+        absolute = true
+    }
+
+    inBackend = ${node.context.workspace.name != 'live'}
+}

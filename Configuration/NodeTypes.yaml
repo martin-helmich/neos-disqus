@@ -1,0 +1,26 @@
+'Helmich.Disqus:Discussion':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    group: plugins
+    label: Disqus comments
+    icon: icon-comments
+    inspector:
+      groups:
+        disqus:
+          label: Disqus
+  properties:
+    disqusSitename:
+      type: string
+      ui:
+        label: Site name
+        reloadIfChanged: true
+        inspector:
+          group: disqus
+    disqusIdentifier:
+      type: string
+      ui:
+        label: 'Thread identifier'
+        reloadIfChanged: TRUE
+        inspector:
+          group: disqus
