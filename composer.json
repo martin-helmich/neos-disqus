@@ -1,5 +1,5 @@
 {
-    "name": "helmich/disqus",
+    "name": "helmich/neos-disqus",
     "type": "typo3-flow-package",
     "description": "Add Disqus discussions to your site",
     "require": {
